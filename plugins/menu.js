@@ -30,30 +30,35 @@ let tags = {
 }
 const defaultMenu = {
   before: `
-╭─「 %me 」
-│ Hai, %name!
-│
-│ Tersisa *%limit Limit*
-│ Role *%role*
-│ Level *%level (%exp / %maxexp)* [%xp4levelup lagi untuk levelup]
-│ %totalexp XP in Total
-│ 
-│ Tanggal: *%week %weton, %date*
-│ Tanggal Islam: *%dateIslamic*
-│ Waktu: *%time*
-│
-│ Uptime: *%uptime (%muptime)*
-│ Database: %rtotalreg of %totalreg
-│ Github:
-│ %github
-╰────
+╔════════════════════
+║ 
+╠════════════════════
+╠════════════════════
+║╭──❉ * %me * ❉───
+║│
+║╰──────────────────
+╠════════════════════
+║╭──❉ * %me * ❉──
+║│
+║│
+║│
+║│
+║│
+║│
+║╰──────────────────
+╠════════════════════
+╠════════════════════
+║ 
+╚════════════════════
 %readmore`.trimStart(),
-  header: '╭─「 %category 」',
-  body: '│ • %cmd %islimit %isPremium',
-  footer: '╰────\n',
+  header: '╔╭──❉ %category ❉──',
+  body: '║│%cmd',
+  footer: '╚╰──────────────────',
   after: `
-*%npmname@^%version*
-${'```%npmdesc```'}
+╔════════════════════
+║ 
+╚════════════════════
+${'```By = 6283805279906```'}
 `,
 }
 let handler = async (m, { conn, usedPrefix: _p }) => {
